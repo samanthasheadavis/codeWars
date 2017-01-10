@@ -13,7 +13,6 @@ function findEvenIndex(arr) {
             before = arr.slice(0, count).reduce(function(a, b) {
                 return a + b;
             }, 0);
-
             after = arr.slice(count + 1, arr.length).reduce(function(a, b) {
                 return a + b;
             }, 0);
