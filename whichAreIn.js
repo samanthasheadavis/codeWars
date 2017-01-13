@@ -1,23 +1,16 @@
 function inArray(array1,array2){
-var r = [];
+var newArray = [];
   array1.sort('').forEach(substring => {
     array2.sort('').forEach(string => {
       if (string.includes(substring)) {
-        r.push(substring);
+        newArray.push(substring);
       }
     });
   });
-  console.log(r);
-
-//   var newArray = []
-//   for (count = 0; count<array2.length; count++) {
-//     for (index = 0; index<array1.length; index++) {
-//       if (array2[count].includes(array1[index])) {
-//         newArray.push(array1[index]);
-//       }
-//     }
-//   }
-//   console.log(newArray);
+  r = newArray.filter(function(item, index, inputArray) {
+    return inputArray.indexOf(item) == index;
+  });
+  return r;
 }
 
 inArray(["xyz", "live", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"]);
