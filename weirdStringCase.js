@@ -1,15 +1,18 @@
 function toWeirdCase(string) {
-    str = string.trim();
-    var arr = [];
-    for (count = 0; count < str.length; count++) {
-        if (count % 2 === 0) {
-          arr.push(str[count].toUpperCase());
-        } else {
-          arr.push(str[count].toLowerCase());
+    arr = string.split(' ');
+    weirdArray = [];
+    arr.forEach(word => {
+        for (count = 0; count < word.length; count++) {
+            if (count % 2 === 0) {
+                weirdArray.push(word[count].toUpperCase());
+            } else {
+                weirdArray.push(word[count].toLowerCase());
+            }
         }
-    }
-    return arr.join('');
-}
-
+        weirdArray.push(' ');
+    });
+    weirdArray.splice(weirdArray.length -1, 1);
+    return weirdArray.join('');
+  }
 
 toWeirdCase('This is a test');
