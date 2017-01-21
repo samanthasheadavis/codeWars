@@ -1,5 +1,5 @@
 function validParentheses(parens) {
-    var arr = parens.split('');
+    var arr = parens.match(/[()]/gi);
     var spliceArray = [];
     var depth = 0;
 
@@ -21,4 +21,4 @@ function validParentheses(parens) {
     return arr.length === 0 ? true : false;
 }
 
-validParentheses("(())((()())())");
+validParentheses("(h(a))");
