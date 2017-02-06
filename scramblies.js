@@ -1,4 +1,5 @@
 function scramble(str1, str2) {
+
   var diff = str1.length - str2.length;
   for (count=0; count<str2.length; count++) {
     if ((str1).includes(str2[count])) {
@@ -8,5 +9,4 @@ function scramble(str1, str2) {
   return str1.length === diff ? true : false;
 }
 
-scramble('cedewaraaossoqqyt','codewarsss');
-// scramble('codewarsssss','codewars');
+scramble('cedewaraaossoqqyt','codewars');
